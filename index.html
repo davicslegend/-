@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Samurai: Way of the Blade</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menu" class="screen">
+  <div class="menu-card">
+    <div class="eyebrow">3D SAMURAI GAME</div>
+    <h1>SAMURAI</h1>
+    <h2>WAY OF THE BLADE</h2>
+    <p id="menuStats">Уровень 1 · Монеты 0</p>
+    <button id="continueBtn">ПРОДОЛЖИТЬ</button>
+    <button id="shopBtn">КАТАНЫ</button>
+    <button id="resetBtn" class="secondary">СБРОСИТЬ СОХРАНЕНИЕ</button>
+  </div>
+</div>
+
+<div id="shop" class="screen hidden">
+  <div class="shop-card">
+    <button id="backBtn" class="back">← НАЗАД</button>
+    <h2>АРСЕНАЛ КАТАН</h2>
+    <p>Монеты: <b id="shopCoins">0</b></p>
+    <div id="katanas"></div>
+  </div>
+</div>
+
+<div id="game" class="hidden">
+  <canvas id="gameCanvas"></canvas>
+  <div id="hud">
+    <div class="topbar">
+      <span>❤️ <b id="hp">100</b></span>
+      <span>🪙 <b id="coins">0</b></span>
+      <span>УРОВЕНЬ <b id="level">1</b>/30</span>
+    </div>
+    <div id="message"></div>
+  </div>
+  <div id="joystick"><div id="stick"></div></div>
+  <div class="actions">
+    <button id="attack">⚔</button>
+    <button id="dodge">↝</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
